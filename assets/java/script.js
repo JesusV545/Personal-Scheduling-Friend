@@ -1,6 +1,6 @@
 //Display the current date
 let todayAndDate = dayjs();
-$('#currentDay').text(todayAndDate.format("MMM D, YYYY"));
+$('#currentDay').text(todayAndDate.format("dddd - MMM D, YYYY"));
 
 //save button function that saves user input when the document is fully loaded
 $(document).ready(function() {
@@ -17,21 +17,26 @@ $(document).ready(function() {
 
     //it's gonna need to loop over blocks
     $('.time-block').each(function() {
-      let blockTime = parseInt($(this).attr("id").split("hour")[1]);
+      let blockTime = parseInt($(this).attr("id").split("hour-")[1]);
 
       //need to compare whether class needs to be past, present, or future!
       if (blockTime < currentTime) {
         $(this).removeClass("future");
         $(this).removeClass("present");
         $(this).addClass("past");
-      } else if (blockTime === currentTime) {
-          $(this).removeClass("future");
-          $(this).removeClass("past");
-          $(this).addClass("present");
-      } else {
+      } 
+      else if (blockTime === currentTime) {
+        $(this).removeClass("future");
+        $(this).removeClass("past");
+        $(this).addClass("present");
+      } 
+      else if (blockTime > currentTime) {
         $(this).removeClass("past");
         $(this).removeClass("present");
         $(this).addClass("future");
+      }
+      else {
+        console.log("ERROR");
       }
     })
   }
