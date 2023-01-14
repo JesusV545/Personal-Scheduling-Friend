@@ -11,9 +11,11 @@ The purpose of this project was to practice using third party APIs such as boots
 To use this application, the user must simply type text desired time blocks. Once the user has finished typing their text, the save button must be clicked to save to their local storage. This allows the text data to be saved and is able to be accessed at a later time. 
 
 ## At a Glance
+![2023-01-14](https://user-images.githubusercontent.com/117941643/212498854-f571e250-4b35-478c-aad2-b343cf457336.png)
 
 ### Consists of
-HTML, CSS, Javascript(jQuery, bootstrap, Day.js)
+HTML, CSS, Javascript (jQuery, bootstrap, Day.js)
 
 ### Links
+https://jesusv545.github.io/Personal-Scheduling-Friend/
 
